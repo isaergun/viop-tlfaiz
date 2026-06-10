@@ -1,7 +1,9 @@
 # VIOP → İma Edilen TL Faizi
 
+[![Streamlit'te aç](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=isaergun%2Fviop-tlfaiz&branch=main&mainModule=app.py)
+
 BIST VIOP döviz vadeli kontratlarından (USD/TRY, EUR/TRY) **örtülü faiz paritesi (CIP)** ile
-ima edilen TL faiz vade eğrisini hesaplayan ve takip eden lokal Streamlit paneli.
+ima edilen TL faiz vade eğrisini hesaplayan ve takip eden Streamlit paneli.
 
 ## Mantık
 
@@ -18,13 +20,22 @@ F = S · (1 + r_TL·t) / (1 + r_yab·t)   ⇒   r_TL = ((F/S)·(1 + r_yab·t) �
 - **Spot yedeği**: `open.er-api.com` (günlük)
 - **Yabancı faizler otomatik**: SOFR → New York Fed API, €STR → ECB API (sidebar'da elle ezilebilir)
 
-## Çalıştırma
+## Çalıştırma (lokal)
 
 ```bash
 cd viop-tlfaiz
 pip install -r requirements.txt
 streamlit run app.py
 ```
+
+## Deploy (Streamlit Community Cloud)
+
+1. Üstteki **"Streamlit'te aç"** rozetine tıkla (ya da [share.streamlit.io](https://share.streamlit.io) → New app).
+2. Repo `isaergun/viop-tlfaiz`, branch `main`, main file `app.py` → **Deploy**.
+3. Birkaç dakikada `https://<ad>.streamlit.app` adresinden yayında olur.
+
+> Not: Streamlit Cloud dosya sistemi geçici olduğundan `viop_history.db` (geçmiş)
+> yeniden başlatmada sıfırlanır. Kalıcı geçmiş için harici DB (ör. Postgres) gerekir.
 
 ## Sekmeler
 
