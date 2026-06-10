@@ -1,6 +1,8 @@
 # VIOP → İma Edilen TL Faizi
 
-[![Streamlit'te aç](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=isaergun%2Fviop-tlfaiz&branch=main&mainModule=app.py)
+**🔗 Canlı uygulama: https://isaergun-viop-tlfaiz-app-x7nrcq.streamlit.app**
+
+[![Streamlit'te aç](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://isaergun-viop-tlfaiz-app-x7nrcq.streamlit.app)
 
 BIST VIOP döviz vadeli kontratlarından (USD/TRY, EUR/TRY) **örtülü faiz paritesi (CIP)** ile
 ima edilen TL faiz vade eğrisini hesaplayan ve takip eden Streamlit paneli.
